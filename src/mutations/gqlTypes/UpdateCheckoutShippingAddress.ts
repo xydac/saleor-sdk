@@ -195,14 +195,17 @@ export interface UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_che
 export interface UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_checkout_availableShippingMethods {
   __typename: "ShippingMethod";
   /**
-   * The ID of the object.
+   * Unique ID of ShippingMethod available for Order.
    */
   id: string;
+  /**
+   * Shipping method name.
+   */
   name: string;
   /**
-   * The price of the cheapest variant (including discounts).
+   * The price of selected shipping method.
    */
-  price: UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_checkout_availableShippingMethods_price | null;
+  price: UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_checkout_availableShippingMethods_price;
 }
 
 export interface UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_checkout_shippingMethod_price {
@@ -220,14 +223,17 @@ export interface UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_che
 export interface UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_checkout_shippingMethod {
   __typename: "ShippingMethod";
   /**
-   * The ID of the object.
+   * Unique ID of ShippingMethod available for Order.
    */
   id: string;
+  /**
+   * Shipping method name.
+   */
   name: string;
   /**
-   * The price of the cheapest variant (including discounts).
+   * The price of selected shipping method.
    */
-  price: UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_checkout_shippingMethod_price | null;
+  price: UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_checkout_shippingMethod_price;
 }
 
 export interface UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_checkout_shippingPrice_gross {
@@ -584,7 +590,7 @@ export interface UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_che
    */
   email: string;
   /**
-   * Shipping methods that can be used with this order.
+   * Shipping methods that can be used with this checkout.
    */
   availableShippingMethods: (UpdateCheckoutShippingAddress_checkoutShippingAddressUpdate_checkout_availableShippingMethods | null)[];
   /**
@@ -791,14 +797,17 @@ export interface UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_avai
 export interface UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_availableShippingMethods {
   __typename: "ShippingMethod";
   /**
-   * The ID of the object.
+   * Unique ID of ShippingMethod available for Order.
    */
   id: string;
+  /**
+   * Shipping method name.
+   */
   name: string;
   /**
-   * The price of the cheapest variant (including discounts).
+   * The price of selected shipping method.
    */
-  price: UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_availableShippingMethods_price | null;
+  price: UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_availableShippingMethods_price;
 }
 
 export interface UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_shippingMethod_price {
@@ -816,14 +825,17 @@ export interface UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_ship
 export interface UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_shippingMethod {
   __typename: "ShippingMethod";
   /**
-   * The ID of the object.
+   * Unique ID of ShippingMethod available for Order.
    */
   id: string;
+  /**
+   * Shipping method name.
+   */
   name: string;
   /**
-   * The price of the cheapest variant (including discounts).
+   * The price of selected shipping method.
    */
-  price: UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_shippingMethod_price | null;
+  price: UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_shippingMethod_price;
 }
 
 export interface UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_shippingPrice_gross {
@@ -1180,7 +1192,7 @@ export interface UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout {
    */
   email: string;
   /**
-   * Shipping methods that can be used with this order.
+   * Shipping methods that can be used with this checkout.
    */
   availableShippingMethods: (UpdateCheckoutShippingAddress_checkoutEmailUpdate_checkout_availableShippingMethods | null)[];
   /**

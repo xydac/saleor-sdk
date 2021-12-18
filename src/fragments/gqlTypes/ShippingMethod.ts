@@ -22,12 +22,15 @@ export interface ShippingMethod_price {
 export interface ShippingMethod {
   __typename: "ShippingMethod";
   /**
-   * The ID of the object.
+   * Unique ID of ShippingMethod available for Order.
    */
   id: string;
+  /**
+   * Shipping method name.
+   */
   name: string;
   /**
-   * The price of the cheapest variant (including discounts).
+   * The price of selected shipping method.
    */
-  price: ShippingMethod_price | null;
+  price: ShippingMethod_price;
 }

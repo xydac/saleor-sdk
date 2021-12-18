@@ -3,7 +3,7 @@
 // @generated
 // This file was automatically generated and should not be edited.
 
-import { PaymentChargeStatusEnum, OrderStatus } from "./../../gqlTypes/globalTypes";
+import { PaymentChargeStatusEnum, OrderStatus, OrderDiscountType, DiscountValueTypeEnum } from "./../../gqlTypes/globalTypes";
 
 // ====================================================
 // GraphQL fragment: OrderDetail
@@ -347,6 +347,35 @@ export interface OrderDetail_lines {
   totalPrice: OrderDetail_lines_totalPrice;
 }
 
+export interface OrderDetail_discounts_amount {
+  __typename: "Money";
+  /**
+   * Amount of money.
+   */
+  amount: number;
+  /**
+   * Currency code.
+   */
+  currency: string;
+}
+
+export interface OrderDetail_discounts {
+  __typename: "OrderDiscount";
+  type: OrderDiscountType;
+  /**
+   * Returns amount of discount.
+   */
+  amount: OrderDetail_discounts_amount;
+  /**
+   * Value of the discount. Can store fixed value or percent value
+   */
+  value: any;
+  /**
+   * Type of the discount: fixed or percent
+   */
+  valueType: DiscountValueTypeEnum;
+}
+
 export interface OrderDetail_subtotal_gross {
   __typename: "Money";
   /**
@@ -488,6 +517,10 @@ export interface OrderDetail {
    * List of order lines.
    */
   lines: (OrderDetail_lines | null)[];
+  /**
+   * List of all discounts assigned to the order.
+   */
+  discounts: OrderDetail_discounts[] | null;
   /**
    * The sum of line prices not including shipping.
    */

@@ -49,6 +49,15 @@ export const orderDetailFragment = gql`
         ...OrderPrice
       }
     }
+    discounts {
+      type
+      amount {
+        amount
+        currency
+      }
+      value
+      valueType
+    }
     subtotal {
       ...OrderPrice
     }

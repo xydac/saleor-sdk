@@ -3,7 +3,7 @@
 // @generated
 // This file was automatically generated and should not be edited.
 
-import { CheckoutErrorCode, PaymentChargeStatusEnum, OrderStatus } from "./../../gqlTypes/globalTypes";
+import { CheckoutErrorCode, PaymentChargeStatusEnum, OrderStatus, OrderDiscountType, DiscountValueTypeEnum } from "./../../gqlTypes/globalTypes";
 
 // ====================================================
 // GraphQL mutation operation: CompleteCheckout
@@ -364,6 +364,35 @@ export interface CompleteCheckout_checkoutComplete_order_lines {
   totalPrice: CompleteCheckout_checkoutComplete_order_lines_totalPrice;
 }
 
+export interface CompleteCheckout_checkoutComplete_order_discounts_amount {
+  __typename: "Money";
+  /**
+   * Amount of money.
+   */
+  amount: number;
+  /**
+   * Currency code.
+   */
+  currency: string;
+}
+
+export interface CompleteCheckout_checkoutComplete_order_discounts {
+  __typename: "OrderDiscount";
+  type: OrderDiscountType;
+  /**
+   * Returns amount of discount.
+   */
+  amount: CompleteCheckout_checkoutComplete_order_discounts_amount;
+  /**
+   * Value of the discount. Can store fixed value or percent value
+   */
+  value: any;
+  /**
+   * Type of the discount: fixed or percent
+   */
+  valueType: DiscountValueTypeEnum;
+}
+
 export interface CompleteCheckout_checkoutComplete_order_subtotal_gross {
   __typename: "Money";
   /**
@@ -505,6 +534,10 @@ export interface CompleteCheckout_checkoutComplete_order {
    * List of order lines.
    */
   lines: (CompleteCheckout_checkoutComplete_order_lines | null)[];
+  /**
+   * List of all discounts assigned to the order.
+   */
+  discounts: CompleteCheckout_checkoutComplete_order_discounts[] | null;
   /**
    * The sum of line prices not including shipping.
    */
