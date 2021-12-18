@@ -144,3 +144,7 @@ webpack is configured to always resolve `react` to `./node_modules/react`. It ma
 seem redundant for the most use cases, but helps in sdk's local development, because
 it overcomes `npm`'s limitations regarding peer dependencies hoisting, explicitly
 telling webpack to always have one and only copy of `react`.
+
+## Modifications by xydac
+
+- Added Discounts to Order Details
