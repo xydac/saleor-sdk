@@ -26,10 +26,15 @@ export const selectedAttributeFragment = gql`
       id
       name
       slug
+      inputType
+      entityType
     }
     values {
       id
       name
+      value
+      richText
+      reference
     }
   }
 `;

@@ -148,3 +148,4 @@ telling webpack to always have one and only copy of `react`.
 ## Modifications by xydac
 
 - Added Discounts to Order Details
+- Added Additional attribute fields for Products
