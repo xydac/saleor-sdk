@@ -9,15 +9,6 @@ import { CountryCode, VariantAttributeScope, AttributeInputTypeEnum, AttributeEn
 // GraphQL query operation: ProductDetails
 // ====================================================
 
-export interface ProductDetails_product_defaultVariant {
-  __typename: "ProductVariant";
-  /**
-   * The ID of the object.
-   */
-  id: string;
-  sku: string;
-}
-
 export interface ProductDetails_product_thumbnail {
   __typename: "Image";
   /**
@@ -222,7 +213,7 @@ export interface ProductDetails_product_pricing {
   priceRange: ProductDetails_product_pricing_priceRange | null;
 }
 
-export interface ProductDetails_product_category_products_edges_node_defaultVariant {
+export interface ProductDetails_product_defaultVariant {
   __typename: "ProductVariant";
   /**
    * The ID of the object.
@@ -463,7 +454,6 @@ export interface ProductDetails_product_category_products_edges_node {
    */
   availableForPurchase: any | null;
   seoTitle: string | null;
-  defaultVariant: ProductDetails_product_category_products_edges_node_defaultVariant | null;
   /**
    * The main thumbnail for a product.
    */
@@ -770,7 +760,6 @@ export interface ProductDetails_product {
    */
   availableForPurchase: any | null;
   seoTitle: string | null;
-  defaultVariant: ProductDetails_product_defaultVariant | null;
   /**
    * The main thumbnail for a product.
    */
@@ -784,6 +773,7 @@ export interface ProductDetails_product {
    */
   pricing: ProductDetails_product_pricing | null;
   description: any | null;
+  defaultVariant: ProductDetails_product_defaultVariant | null;
   category: ProductDetails_product_category | null;
   /**
    * List of images for the product.

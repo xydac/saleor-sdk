@@ -10,10 +10,6 @@ export const baseProductFragment = gql`
     isAvailableForPurchase
     availableForPurchase
     seoTitle
-    defaultVariant {
-      id
-      sku
-    }
     thumbnail {
       url
       alt
@@ -113,6 +109,10 @@ export const productFragment = gql`
     ...BaseProduct
     ...ProductPricingField
     description
+    defaultVariant {
+      id
+      sku
+    }
     category {
       id
       name
