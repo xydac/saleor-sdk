@@ -10,6 +10,10 @@ export const baseProductFragment = gql`
     isAvailableForPurchase
     availableForPurchase
     seoTitle
+    defaultVariant {
+      id
+      sku
+    }
     thumbnail {
       url
       alt
