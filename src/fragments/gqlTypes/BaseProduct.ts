@@ -7,15 +7,6 @@
 // GraphQL fragment: BaseProduct
 // ====================================================
 
-export interface BaseProduct_defaultVariant {
-  __typename: "ProductVariant";
-  /**
-   * The ID of the object.
-   */
-  id: string;
-  sku: string;
-}
-
 export interface BaseProduct_thumbnail {
   __typename: "Image";
   /**
@@ -54,7 +45,6 @@ export interface BaseProduct {
    */
   availableForPurchase: any | null;
   seoTitle: string | null;
-  defaultVariant: BaseProduct_defaultVariant | null;
   /**
    * The main thumbnail for a product.
    */

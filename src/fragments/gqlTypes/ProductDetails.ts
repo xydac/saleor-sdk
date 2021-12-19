@@ -9,15 +9,6 @@ import { AttributeInputTypeEnum, AttributeEntityTypeEnum } from "./../../gqlType
 // GraphQL fragment: ProductDetails
 // ====================================================
 
-export interface ProductDetails_defaultVariant {
-  __typename: "ProductVariant";
-  /**
-   * The ID of the object.
-   */
-  id: string;
-  sku: string;
-}
-
 export interface ProductDetails_thumbnail {
   __typename: "Image";
   /**
@@ -220,15 +211,6 @@ export interface ProductDetails_pricing {
    * The discounted price range of the product variants.
    */
   priceRange: ProductDetails_pricing_priceRange | null;
-}
-
-export interface ProductDetails_category_products_edges_node_defaultVariant {
-  __typename: "ProductVariant";
-  /**
-   * The ID of the object.
-   */
-  id: string;
-  sku: string;
 }
 
 export interface ProductDetails_category_products_edges_node_thumbnail {
@@ -463,7 +445,6 @@ export interface ProductDetails_category_products_edges_node {
    */
   availableForPurchase: any | null;
   seoTitle: string | null;
-  defaultVariant: ProductDetails_category_products_edges_node_defaultVariant | null;
   /**
    * The main thumbnail for a product.
    */
@@ -770,7 +751,6 @@ export interface ProductDetails {
    */
   availableForPurchase: any | null;
   seoTitle: string | null;
-  defaultVariant: ProductDetails_defaultVariant | null;
   /**
    * The main thumbnail for a product.
    */
