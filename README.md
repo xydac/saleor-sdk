@@ -149,3 +149,5 @@ telling webpack to always have one and only copy of `react`.
 
 - Added Discounts to Order Details
 - Added Additional attribute fields for Products
+- Increase releated products count to 6
+- Adding default variant ID

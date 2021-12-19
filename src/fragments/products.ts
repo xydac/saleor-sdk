@@ -10,6 +10,10 @@ export const baseProductFragment = gql`
     isAvailableForPurchase
     availableForPurchase
     seoTitle
+    defaultVariant {
+      id
+      sku
+    }
     thumbnail {
       url
       alt
@@ -113,7 +117,7 @@ export const productFragment = gql`
       id
       name
       slug
-      products(first: 3, channel: $channel) {
+      products(first: 6, channel: $channel) {
         edges {
           node {
             ...BaseProduct
